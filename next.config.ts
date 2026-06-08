@@ -1,7 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  turbopack: {
+    rules: {
+      "*.bin": {
+        type: "asset",
+      },
+      "*.ttf": {
+        type: "asset",
+      },
+    },
+  },
 };
 
 export default nextConfig;
