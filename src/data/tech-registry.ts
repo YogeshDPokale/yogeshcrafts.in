@@ -1,0 +1,33 @@
+export const TECH = {
+  dotnet:     { label: ".NET",         color: "#512BD4", icon: "SiDotnet" },
+  csharp:     { label: "C#",           color: "#239120", icon: "SiSharp" },
+  aspnet:     { label: "ASP.NET",      color: "#512BD4", icon: "SiDotnet" },
+  angular:    { label: "Angular",      color: "#DD0031", icon: "SiAngular" },
+  typescript: { label: "TypeScript",   color: "#3178C6", icon: "SiTypescript" },
+  javascript: { label: "JavaScript",   color: "#F7DF1E", icon: "SiJavascript" },
+  rxjs:       { label: "RxJS",         color: "#B7178C", icon: "SiReactivex" },
+  nodejs:     { label: "Node.js",      color: "#5FA04E", icon: "SiNodedotjs" },
+  python:     { label: "Python",       color: "#3776AB", icon: "SiPython" },
+  mssql:      { label: "MS SQL",       color: "#CC2927", icon: null },
+  mysql:      { label: "MySQL",        color: "#4479A1", icon: "SiMysql" },
+  postgres:   { label: "PostgreSQL",   color: "#4169E1", icon: "SiPostgresql" },
+  azure:      { label: "Azure",        color: "#0078D4", icon: "TbBrandAzure" },
+  azureopenai:{ label: "Azure OpenAI", color: "#0078D4", icon: "TbBrandAzure" },
+  gcp:        { label: "GCP",          color: "#4285F4", icon: "SiGooglecloud" },
+  vertexai:   { label: "Vertex AI",    color: "#4285F4", icon: "SiGooglecloud" },
+  anthropic:  { label: "Claude",       color: "#D97757", icon: "SiAnthropic" },
+  openai:     { label: "OpenAI",       color: "#10A37F", icon: "SiOpenai" },
+  mcp:        { label: "MCP",          color: "#000000", icon: null }, // text-only chip
+  signalr:    { label: "SignalR",      color: "#512BD4", icon: "SiDotnet" },
+  blob:       { label: "Azure Blob",   color: "#0078D4", icon: "TbBrandAzure" },
+  php:        { label: "PHP",          color: "#777BB4", icon: "SiPhp" },
+  solidity:   { label: "Solidity",     color: "#363636", icon: "SiSolidity" },
+  truffle:    { label: "Truffle",      color: "#5E464D", icon: null },
+  ganache:    { label: "Ganache",      color: "#E4A663", icon: null },
+  metamask:   { label: "MetaMask",     color: "#F6851B", icon: null },
+  c:          { label: "C",            color: "#A8B9CC", icon: "SiC" },
+  cpp:        { label: "C++",          color: "#00599C", icon: "SiCplusplus" },
+  java:       { label: "Java",         color: "#ED8B00", icon: "SiOpenjdk" },
+} as const;
+
+export type TechKey = keyof typeof TECH;
