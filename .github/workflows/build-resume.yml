@@ -42,7 +42,7 @@ jobs:
       - name: Commit updated resume.pdf
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: rebuild resume.pdf from LaTeX source [skip ci]"
+          commit_message: "chore: rebuild resume.pdf from LaTeX source"
           file_pattern: "public/resume.pdf"
           commit_user_name: "github-actions[bot]"
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
