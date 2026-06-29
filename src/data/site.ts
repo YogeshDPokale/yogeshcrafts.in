@@ -9,7 +9,7 @@ export const site = {
   available: true,                        // shows "available" eyebrow
   socials: {
     linkedin: "https://www.linkedin.com/in/yogesh-pokale-7b887025b",
-    github: "https://github.com/yogeshcrafts",
+    github: "https://github.com/YogeshDPokale/yogeshcrafts.in",
     twitter: null,
     calendly: null,
   },

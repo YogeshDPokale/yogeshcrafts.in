@@ -18,6 +18,7 @@ export function Hero() {
           {/* Eyebrow Availability Badge */}
           {site.available && (
             <StaggerItem>
+              {/*
               <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-accent/30 px-3 py-1 text-xs font-mono font-medium text-primary">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -25,6 +26,7 @@ export function Hero() {
                 </span>
                 Available for new opportunities
               </div>
+              */}
             </StaggerItem>
           )}
 

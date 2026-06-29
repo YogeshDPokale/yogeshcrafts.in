@@ -48,7 +48,7 @@ export const projects: Project[] = [
     tags: ["Web", "Infrastructure"],
     links: {
       live: "https://yogeshcrafts.in",
-      github: "https://github.com/yogeshcrafts/yogeshcrafts.in"
+      github: "https://github.com/YogeshDPokale/yogeshcrafts.in"
     },
     featured: true
   },

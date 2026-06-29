@@ -79,7 +79,7 @@ export default function ResumePage() {
                 </a>
                 <a href={site.socials.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-primary transition-colors">
                   <FaGithub size={12} />
-                  github.com/yogeshcrafts
+                  github.com/YogeshDPokale/yogeshcrafts.in
                 </a>
               </div>
             </div>
