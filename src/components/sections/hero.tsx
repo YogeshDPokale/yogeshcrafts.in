@@ -45,35 +45,37 @@ export function Hero() {
           {/* Description Subparagraph */}
           <StaggerItem>
             <p className="text-base md:text-lg leading-relaxed text-muted-foreground/80 max-w-2xl">
-              Currently at <span className="text-foreground font-medium">Unlock Future</span> in Pune, India. 
-              I design and build enterprise-grade web apps across the .NET and Angular ecosystems, 
-              with a specialized focus on multi-provider LLM orchestration, authentication services, and production security audits.
+              Based in <span className="text-foreground font-medium">Pune, India</span> — I build web applications
+              end to end at{" "}
+              <span className="text-foreground font-medium">Unlock Future</span>: Angular frontends, .NET APIs,
+              and Azure cloud infrastructure. Currently deep in the AI tooling space — building MCP servers,
+              LLM orchestration layers, and developer productivity tooling.
             </p>
           </StaggerItem>
 
           {/* CTAs */}
           <StaggerItem className="flex flex-wrap items-center gap-4 pt-4">
             <Link
-              href="/resume"
+              href="/projects"
               className={buttonVariants({
                 variant: "default",
                 size: "lg",
                 className: "rounded-lg group h-11 px-6 shadow-sm border border-primary/10 hover:translate-y-[-1px] transition-all duration-200"
               })}
             >
-              View Resume
+              View Projects
               <ArrowRight size={16} className="ml-1.5 transition-transform group-hover:translate-x-1" />
             </Link>
-            <a
-              href="#contact"
+            <Link
+              href="/resume"
               className={buttonVariants({
                 variant: "outline",
                 size: "lg",
                 className: "rounded-lg h-11 px-6 hover:bg-secondary hover:translate-y-[-1px] transition-all duration-200"
               })}
             >
-              Get in touch
-            </a>
+              View Resume
+            </Link>
           </StaggerItem>
         </StaggerContainer>
       </div>

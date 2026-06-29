@@ -1,0 +1,165 @@
+%% ============================================================
+%%  Yogesh Pokale — Resume
+%%  Edit this file and push — GitHub Actions auto-generates
+%%  public/resume.pdf via pdflatex on every change.
+%% ============================================================
+
+\documentclass[10pt, letterpaper]{article}
+
+% ── Packages ─────────────────────────────────────────────────
+\usepackage[
+  top=0.55in, bottom=0.55in,
+  left=0.65in, right=0.65in
+]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% ── Colors ───────────────────────────────────────────────────
+\definecolor{accent}{HTML}{0F172A}
+\definecolor{muted}{HTML}{64748B}
+\definecolor{rule}{HTML}{CBD5E1}
+
+% ── Hyperlinks ───────────────────────────────────────────────
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  hidelinks
+}
+
+% ── Section formatting ───────────────────────────────────────
+\titleformat{\section}
+  {\normalfont\small\bfseries\uppercase\color{muted}}
+  {}{0em}{}
+  [\vspace{1pt}\color{rule}\titlerule\vspace{4pt}]
+
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+% ── No page numbers ──────────────────────────────────────────
+\pagestyle{empty}
+
+% ── List tweaks ──────────────────────────────────────────────
+\setlist[itemize]{
+  leftmargin=1.2em,
+  itemsep=1pt,
+  parsep=0pt,
+  topsep=2pt
+}
+
+% ── Custom commands ──────────────────────────────────────────
+\newcommand{\role}[4]{%
+  \textbf{#1} \hfill {\small\color{muted}#3 -- #4}\\
+  \textit{\small\color{muted}#2}\\[2pt]
+}
+
+\newcommand{\project}[3]{%
+  \textbf{#1} {\small\color{muted}| #2} \hfill {\small\color{muted}#3}\\[2pt]
+}
+
+% ─────────────────────────────────────────────────────────────
+\begin{document}
+
+%% ── HEADER ──────────────────────────────────────────────────
+\begin{center}
+  {\LARGE\bfseries Yogesh Pokale}\\[4pt]
+  \small
+  Pune, Maharashtra, India
+  \quad\textbullet\quad
+  \href{mailto:yogesh.d.pokale@gmail.com}{yogesh.d.pokale@gmail.com}
+  \quad\textbullet\quad
+  \href{https://yogeshcrafts.in}{yogeshcrafts.in}
+  \quad\textbullet\quad
+  \href{https://github.com/yogeshcrafts}{\faGithub\ yogeshcrafts}
+  \quad\textbullet\quad
+  \href{https://www.linkedin.com/in/yogesh-pokale-7b887025b}{\faLinkedin\ yogesh-pokale}
+\end{center}
+
+\vspace{6pt}
+
+%% ── SUMMARY ─────────────────────────────────────────────────
+\section{Summary}
+
+Full-stack software engineer with 2+ years of production experience building and shipping
+web applications end to end --- Angular frontends, .NET APIs, and Azure cloud infrastructure.
+Currently specializing in AI tooling: MCP servers, LLM orchestration services, and developer
+productivity systems. Strong background in authentication (OAuth 2.0 / OIDC) and compliance
+(VAPT, GDPR, ISO).
+
+%% ── EXPERIENCE ──────────────────────────────────────────────
+\section{Experience}
+
+\role{Software Engineer (Full-Stack)}{Unlock Future Private Limited}{Jun 2025}{Present}
+\begin{itemize}
+  \item Designed and built a multi-provider LLM orchestration service (Azure OpenAI, GCP Vertex AI, Anthropic Claude) behind a unified streaming API, with configurable system-instruction layers for agentic workflows.
+  \item Built an internal MCP (Model Context Protocol) server that gives AI coding assistants full MSSQL schema context on demand --- adopted across the engineering team, eliminating manual schema copy-pasting.
+  \item Independently replicated a production AI assistant: containerized code execution sandbox, multi-turn chat summarization, deferred connector system, and multi-provider LLM integration.
+  \item Owned authentication across multiple production apps: JWT lifecycle, refresh-token rotation, Google SSO, Microsoft SSO, and Role-Based Access Control (RBAC) in .NET + Angular.
+  \item Sole owner of Azure deployments across 3 products --- App Services, Azure SQL, Storage Accounts, SAS URL generation, and Azure Maps.
+  \item Managed Cloudflare DNS, domain configuration, and CDN setup; owned the full deployment lifecycle from staging to production.
+\end{itemize}
+
+\vspace{6pt}
+
+\role{Associate Software Developer}{Unlock Future Private Limited}{Jun 2024}{Jun 2025}
+\begin{itemize}
+  \item Built and maintained .NET Web APIs and Angular features across multiple production apps, owning features end-to-end.
+  \item Coordinated with external VAPT security firms; remediated all reported vulnerabilities and completed GDPR and ISO compliance audits on the technical side.
+  \item Optimized Angular frontend performance: reduced bundle size, resolved change-detection bottlenecks, improved Core Web Vitals.
+  \item Integrated Azure Blob Storage and GCP services into backend pipelines; designed Azure SQL schemas for production applications.
+\end{itemize}
+
+\vspace{6pt}
+
+\role{Software Developer Intern}{Unlock Future Private Limited}{Nov 2023}{May 2024}
+\begin{itemize}
+  \item Contributed to ASP.NET Web API and Angular projects; built features end-to-end and learned production CI/CD, code review, and release management.
+\end{itemize}
+
+%% ── PROJECTS ────────────────────────────────────────────────
+\section{Projects}
+
+\project{MSSQL MCP Server}{TypeScript · Node.js · MCP Protocol · MSSQL}{2024}
+\begin{itemize}
+  \item Internal MCP server connecting AI coding assistants to MSSQL databases for real-time schema context (tables, columns, relationships, stored procedures). Adopted across the engineering team.
+\end{itemize}
+
+\vspace{4pt}
+
+\project{AI Assistant Platform}{Angular · .NET · Azure · Docker}{2024}
+\begin{itemize}
+  \item Built a fully functional AI assistant from scratch: containerized code execution, multi-turn chat summarization, deferred connector system for external service integrations, and multi-LLM support.
+\end{itemize}
+
+\vspace{4pt}
+
+\project{yogeshcrafts.in --- Portfolio}{Next.js 16 · TypeScript · Cloudflare Workers · OpenNext}{2025}
+\begin{itemize}
+  \item Personal portfolio deployed on Cloudflare Pages via OpenNext adapter. Features dynamic OG image generation, automated sitemap/robots.txt, dark/light theming, and this LaTeX-driven resume pipeline.
+\end{itemize}
+
+%% ── SKILLS ──────────────────────────────────────────────────
+\section{Skills}
+
+\begin{description}[leftmargin=8em, style=sameline, itemsep=3pt]
+  \item[\small\bfseries Frontend]     Angular, TypeScript, RxJS, JavaScript, Next.js, Performance Optimization
+  \item[\small\bfseries Backend]      .NET / C\#, ASP.NET, Node.js, Python, REST APIs
+  \item[\small\bfseries AI Tooling]   MCP Protocol, Azure OpenAI, GCP Vertex AI, Anthropic Claude, LLM Orchestration, Agentic Workflows
+  \item[\small\bfseries Cloud]        Azure App Services, Azure SQL, Azure Blob, Azure Maps, GCP, Cloudflare Pages, Docker
+  \item[\small\bfseries Auth]         OAuth 2.0, OpenID Connect, Refresh Token Rotation, Google/Microsoft SSO, RBAC
+  \item[\small\bfseries Databases]    MSSQL, PostgreSQL, MySQL
+  \item[\small\bfseries Compliance]   VAPT Remediation, GDPR, ISO, SOC
+\end{description}
+
+%% ── EDUCATION ───────────────────────────────────────────────
+\section{Education}
+
+\role{M.Sc. Computer Science}{Savitribai Phule Pune University (SPPU)}{2022}{2024}
+\role{B.Sc. Computer Science}{Savitribai Phule Pune University (SPPU)}{2019}{2022}
+
+\end{document}

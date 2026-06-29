@@ -1,8 +1,8 @@
 export const site = {
   name: "Yogesh Pokale",
   wordmark: "yogeshcrafts",
-  // Tagline option 1 selected as default
-  tagline: "Full-stack engineer building AI-native products with .NET, Angular, and LLM systems.",
+  // Tagline — Option A selected: technical, clear, ATS-friendly
+  tagline: "Full-Stack Engineer · Azure Cloud · AI Tooling",
   location: "Pune, Maharashtra, India",
   email: "yogesh.d.pokale@gmail.com",
   phone: null,                            // hidden by default

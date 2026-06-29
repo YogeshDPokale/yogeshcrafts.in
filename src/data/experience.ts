@@ -18,20 +18,22 @@ export type ExperienceCompany = {
 
 export const experiences: ExperienceCompany[] = [
   {
-    name: "Unlock Future",
+    name: "Unlock Future Private Limited",
     location: "Pune, India",
-    techTags: ["dotnet", "csharp", "aspnet", "angular", "typescript", "mssql", "azure", "gcp", "azureopenai", "anthropic", "mcp"],
+    techTags: ["dotnet", "csharp", "aspnet", "angular", "typescript", "mssql", "azure", "gcp", "azureopenai", "anthropic", "mcp", "docker"],
     roles: [
       {
-        title: "Software Developer",
+        title: "Software Engineer (Full-Stack)",
         type: "Full-time",
         start: "Jun 2025",
         end: "Present",
         bullets: [
-          "Designed and built a multi-provider LLM orchestration service supporting Azure OpenAI, GCP Vertex AI, and Anthropic Claude behind a unified streaming API.",
-          "Integrated Model Context Protocol (MCP) and reasoning-model support, plus a configurable system-instruction layer for agentic workflows.",
-          "Owned authentication and authorization across multiple production applications (.NET + Angular), including JWT lifecycle, refresh-token flows, and role-based access control.",
-          "Partnered with external auditing firms to achieve VAPT, GDPR, SOC, and ISO compliance across 3+ web applications; remediated security findings end-to-end."
+          "Designed and built a multi-provider LLM orchestration service supporting Azure OpenAI, GCP Vertex AI, and Anthropic Claude behind a unified streaming API, with configurable system-instruction layers for agentic workflows.",
+          "Integrated Model Context Protocol (MCP) tooling into the development workflow, enabling AI coding assistants to query MSSQL database schema context on demand — eliminating manual copy-pasting of schema information.",
+          "Built internal developer tooling plugins using Cursor and Claude Code to accelerate team productivity; independently replicated a Claude-like AI assistant with containerized code execution, chat summarization, and deferred connector handling.",
+          "Owned authentication and authorization across multiple production applications (.NET + Angular), including JWT lifecycle management, refresh-token rotation, Google/Microsoft SSO, and Role-Based Access Control (RBAC).",
+          "Sole owner of Azure deployments across 3 products — App Services, Azure SQL, Storage Accounts, SAS URL generation, and Azure Maps integration.",
+          "Managed Cloudflare DNS, domain configuration, and CDN setup for all live products; handled end-to-end deployment lifecycle from staging to production."
         ]
       },
       {
@@ -40,10 +42,11 @@ export const experiences: ExperienceCompany[] = [
         start: "Jun 2024",
         end: "Jun 2025",
         bullets: [
-          "Built and maintained .NET Web APIs and Angular features across multiple production apps.",
-          "Integrated Azure Blob Storage and GCP services into backend pipelines.",
-          "Optimized Angular frontend performance — reduced bundle size, addressed change-detection bottlenecks, and improved Core Web Vitals.",
-          "Owned deployment and release cycles for several internal and client-facing applications."
+          "Built and maintained .NET Web APIs and Angular features across multiple production apps, owning features end-to-end from design to deployment.",
+          "Integrated Azure Blob Storage and GCP services into backend pipelines; designed and managed Azure SQL database schemas for production applications.",
+          "Coordinated with external VAPT security firms and remediated all reported vulnerabilities; involved in GDPR and ISO compliance audits on the technical side.",
+          "Optimized Angular frontend performance — reduced bundle size, addressed change-detection bottlenecks, and improved Core Web Vitals scores.",
+          "Implemented authentication flows across applications — including Google SSO, Microsoft SSO, and in-house sign-in with secure refresh token rotation."
         ]
       },
       {
@@ -53,7 +56,7 @@ export const experiences: ExperienceCompany[] = [
         end: "May 2024",
         bullets: [
           "Contributed to ASP.NET Web API and Angular projects under senior mentorship.",
-          "Built features end-to-end across the .NET + Angular stack; learned production CI/CD, code review, and release management."
+          "Built features end-to-end across the .NET + Angular stack; learned production CI/CD, code review, and release management practices."
         ]
       }
     ]

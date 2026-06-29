@@ -28,6 +28,9 @@ export const TECH = {
   c:          { label: "C",            color: "#A8B9CC", icon: "SiC" },
   cpp:        { label: "C++",          color: "#00599C", icon: "SiCplusplus" },
   java:       { label: "Java",         color: "#ED8B00", icon: "SiOpenjdk" },
+  nextjs:     { label: "Next.js",      color: "#000000", icon: "SiNextdotjs" },
+  cloudflare: { label: "Cloudflare",   color: "#F38020", icon: "SiCloudflare" },
+  docker:     { label: "Docker",       color: "#2496ED", icon: "SiDocker" },
 } as const;
 
 export type TechKey = keyof typeof TECH;

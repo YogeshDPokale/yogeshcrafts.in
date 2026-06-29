@@ -38,33 +38,41 @@ export function About() {
             
             <Reveal delay={0.2} className="flex flex-col gap-6 text-base md:text-lg text-muted-foreground leading-relaxed">
               <p>
-                I'm a full-stack developer based in Pune, India, with 2.5+ years of experience building production web applications. 
-                I work primarily in the <span className="text-foreground font-medium">.NET</span> and <span className="text-foreground font-medium">Angular</span> ecosystem, 
-                with a growing focus on AI-native systems — including LLM orchestration, agentic workflows, and Model Context Protocol (MCP) integrations.
+                I'm a full-stack software engineer based in{" "}
+                <span className="text-foreground font-medium">Pune, India</span>, with 2+ years of
+                production experience. I build web applications end to end —{" "}
+                <span className="text-foreground font-medium">Angular</span> frontends,{" "}
+                <span className="text-foreground font-medium">.NET</span> APIs, and{" "}
+                <span className="text-foreground font-medium">Azure</span> cloud infrastructure — and I own
+                the full deployment lifecycle from development to live.
               </p>
-              
+
               <p>
-                At Unlock Future, I've designed and deployed robust authorization protocols across multiple production apps, 
-                built custom REST and streaming services abstractions that wrap major LLM providers (Azure OpenAI, GCP Vertex AI, Anthropic Claude), 
-                and successfully co-audited systems to secure compliance credentials for VAPT, GDPR, SOC, and ISO audits.
+                I've spent the last year deep in AI tooling — building an{" "}
+                <span className="text-foreground font-medium">MCP server</span> for IDE-to-database context,
+                replicating an AI assistant platform with containerized code execution and connector handling,
+                and building internal developer plugins with Claude Code and Cursor. I'm drawn to the tooling
+                layer: the systems that make developers and AI work better together.
               </p>
-              
+
               <p>
-                I care deeply about building applications that are fast, secure, and cleanly modularized — and the subtle, intentional design 
-                details that make digital software feel built rather than just pieced together.
+                I've also worked closely with VAPT security firms, implemented{" "}
+                <span className="text-foreground font-medium">OAuth/OIDC</span> authentication flows across
+                multiple products, and been involved in GDPR and ISO compliance audits — so I think about
+                security and reliability as part of shipping, not an afterthought.
               </p>
             </Reveal>
 
             {/* Metric Stats Strip */}
             <Reveal delay={0.3} className="pt-4 border-t border-border/40 mt-2">
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs md:text-sm font-mono text-muted-foreground/80">
-                <span>2.5+ Years Experience</span>
+                <span>2+ Years Experience</span>
                 <span className="text-primary/40">•</span>
                 <span>3+ Production Apps</span>
                 <span className="text-primary/40">•</span>
-                <span>4 Compliance Audits</span>
+                <span>VAPT · GDPR · ISO</span>
                 <span className="text-primary/40">•</span>
-                <span>Multi-Cloud (Azure, GCP)</span>
+                <span>Azure · GCP · Cloudflare</span>
               </div>
             </Reveal>
           </div>

@@ -108,6 +108,12 @@ export function Projects() {
                       <span>Live Demo</span>
                     </a>
                   )}
+                  {!project.links.github && !project.links.live && !project.links.caseStudy && (
+                    <span className="inline-flex items-center gap-1.5 text-xs font-mono text-muted-foreground/50 select-none">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                      Private · Company
+                    </span>
+                  )}
                 </div>
               </div>
             </StaggerItem>

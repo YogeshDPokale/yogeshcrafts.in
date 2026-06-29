@@ -10,16 +10,16 @@ export type SkillGroup = {
 
 export const skillGroups: SkillGroup[] = [
   {
-    label: "AI / LLM",
+    label: "Frontend",
     items: [
-      "azureopenai",
-      "vertexai",
-      "anthropic",
-      "mcp",
-      { label: "Agentic Workflows" },
-      { label: "Streaming" },
-      { label: "Reasoning" },
-      { label: "System Instruction Design" }
+      "angular",
+      "typescript",
+      "rxjs",
+      "javascript",
+      "nextjs",
+      { label: "Performance Optimization" },
+      { label: "Lazy Loading" },
+      { label: "Caching" }
     ]
   },
   {
@@ -28,16 +28,50 @@ export const skillGroups: SkillGroup[] = [
       "dotnet",
       "csharp",
       "aspnet",
-      "nodejs"
+      "nodejs",
+      "python"
     ]
   },
   {
-    label: "Frontend",
+    label: "AI & Developer Tools",
     items: [
-      "angular",
-      "typescript",
-      "rxjs",
-      "javascript"
+      "azureopenai",
+      "vertexai",
+      "anthropic",
+      "mcp",
+      { label: "Agentic Workflows" },
+      { label: "Streaming" },
+      { label: "Prompt Engineering" },
+      { label: "AI Chat Architecture" }
+    ]
+  },
+  {
+    label: "Cloud & Infrastructure",
+    items: [
+      "azure",
+      "gcp",
+      "cloudflare",
+      "docker",
+      "blob",
+      { label: "Azure App Services" },
+      { label: "Azure Maps" },
+      { label: "SAS URL Management" },
+      { label: "CI/CD" }
+    ]
+  },
+  {
+    label: "Auth & Security",
+    emphasis: true,
+    items: [
+      { label: "OAuth 2.0" },
+      { label: "OpenID Connect" },
+      { label: "Refresh Token Rotation" },
+      { label: "Google SSO" },
+      { label: "Microsoft SSO" },
+      { label: "RBAC" },
+      { label: "VAPT Remediation" },
+      { label: "GDPR" },
+      { label: "ISO / SOC" }
     ]
   },
   {
@@ -49,35 +83,15 @@ export const skillGroups: SkillGroup[] = [
     ]
   },
   {
-    label: "Cloud & Infra",
-    items: [
-      "azure",
-      "gcp",
-      { label: "Azure Blob" },
-      { label: "CI/CD" },
-      { label: "Deployment" }
-    ]
-  },
-  {
-    label: "Security & Compliance",
-    emphasis: true,
-    items: [
-      { label: "Authentication Systems" },
-      { label: "VAPT" },
-      { label: "GDPR" },
-      { label: "SOC" },
-      { label: "ISO" }
-    ]
-  },
-  {
-    label: "Earlier exposure",
+    label: "Also Familiar With",
     items: [
       "c",
       "cpp",
-      "python",
       "java",
       "php",
-      "solidity"
+      "solidity",
+      { label: "Flutter" },
+      { label: "R" }
     ]
   }
 ];

@@ -1,0 +1,48 @@
+name: Build Resume PDF
+
+# ── Triggers ──────────────────────────────────────────────────────────────────
+# Runs whenever the LaTeX source changes, or manually from GitHub Actions tab
+on:
+  push:
+    paths:
+      - "src/resume/resume.tex"
+  workflow_dispatch:   # manual trigger button in GitHub UI
+
+# ── Permissions ───────────────────────────────────────────────────────────────
+permissions:
+  contents: write      # needed to commit the generated PDF back to the repo
+
+jobs:
+  build-pdf:
+    name: Compile LaTeX → PDF
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Check out the repository
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # 2. Compile resume.tex → resume.pdf using full TeX Live
+      #    xu-cheng/latex-action is the de-facto standard action for this
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: src/resume/resume.tex
+          # Output goes to the same directory as the source;
+          # we move it to public/ in the next step
+          args: -pdf -file-line-error -halt-on-error -output-directory=src/resume
+
+      # 3. Move compiled PDF into public/ so Next.js serves it at /resume.pdf
+      - name: Move PDF to public/
+        run: cp src/resume/resume.pdf public/resume.pdf
+
+      # 4. Commit the updated PDF back to the repository
+      - name: Commit updated resume.pdf
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: rebuild resume.pdf from LaTeX source [skip ci]"
+          file_pattern: "public/resume.pdf"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
