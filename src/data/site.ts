@@ -1,17 +1,15 @@
+import { publicCareer } from "./career";
+
 export const site = {
-  name: "Yogesh Pokale",
+  ...publicCareer.identity,
   wordmark: "yogeshcrafts",
-  // Tagline — Option A selected: technical, clear, ATS-friendly
-  tagline: "Full-Stack Engineer · Azure Cloud · AI Tooling",
-  location: "Pune, Maharashtra, India",
-  email: "yogesh.d.pokale@gmail.com",
-  phone: null,                            // hidden by default
-  available: true,                        // shows "available" eyebrow
+  phone: null,
+  available: true,
   socials: {
-    linkedin: "https://www.linkedin.com/in/yogesh-pokale-7b887025b",
-    github: "https://github.com/YogeshDPokale/yogeshcrafts.in",
+    linkedin: publicCareer.identity.linkedin,
+    github: publicCareer.identity.github,
     twitter: null,
     calendly: null,
   },
-  formspreeEndpoint: process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ?? "",
+  formspreeEndpoint: process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT?.trim() ?? "",
 };

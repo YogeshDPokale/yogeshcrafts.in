@@ -1,13 +1,14 @@
 "use client";
 
+import { Keywords } from "@/components/shared/keywords";
+
 import * as React from "react";
 import Link from "next/link";
 import { projects } from "@/data/projects";
+import { ProjectLinks } from "@/components/shared/project-links";
 import { TechChip } from "@/components/shared/tech-chip";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/shared/reveal";
-import { buttonVariants } from "@/components/ui/button";
-import { ExternalLink, ArrowRight } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
+import { ArrowRight } from "lucide-react";
 
 export function Projects() {
   // Show only featured projects on the homepage
@@ -71,7 +72,7 @@ export function Projects() {
 
                 {/* Blurb */}
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
-                  {project.blurb}
+                  <Keywords text={project.blurb} />
                 </p>
               </div>
 
@@ -84,37 +85,7 @@ export function Projects() {
                   ))}
                 </div>
 
-                {/* Links */}
-                <div className="flex items-center gap-4 pt-4 border-t border-border/40">
-                  {project.links.github && (
-                    <a
-                      href={project.links.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      <FaGithub size={14} />
-                      <span>Codebase</span>
-                    </a>
-                  )}
-                  {project.links.live && (
-                    <a
-                      href={project.links.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-primary hover:underline"
-                    >
-                      <ExternalLink size={14} />
-                      <span>Live Demo</span>
-                    </a>
-                  )}
-                  {!project.links.github && !project.links.live && !project.links.caseStudy && (
-                    <span className="inline-flex items-center gap-1.5 text-xs font-mono text-muted-foreground/50 select-none">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                      Private · Company
-                    </span>
-                  )}
-                </div>
+                <ProjectLinks project={project} />
               </div>
             </StaggerItem>
           ))}

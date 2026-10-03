@@ -1,5 +1,7 @@
 "use client";
 
+import { Keywords } from "@/components/shared/keywords";
+
 import * as React from "react";
 import { experiences } from "@/data/experience";
 import { TechChip } from "@/components/shared/tech-chip";
@@ -77,7 +79,7 @@ export function Experience() {
                     <ul className="list-disc list-outside space-y-2.5 pl-4 text-sm md:text-base text-muted-foreground leading-relaxed">
                       {role.bullets.map((bullet, bulletIdx) => (
                         <li key={bulletIdx} className="hover:text-foreground transition-colors duration-150">
-                          {bullet}
+                          <Keywords text={bullet} />
                         </li>
                       ))}
                     </ul>

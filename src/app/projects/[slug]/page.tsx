@@ -1,9 +1,11 @@
+import { Keywords } from "@/components/shared/keywords";
 import * as React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
+import { ProjectLinks } from "@/components/shared/project-links";
 import { TechChip } from "@/components/shared/tech-chip";
-import { ArrowLeft, Construction } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 interface CaseStudyProps {
   params: Promise<{ slug: string }>;
@@ -34,7 +36,7 @@ export default async function ProjectCaseStudyPage({ params }: CaseStudyProps) {
             className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
           >
             <ArrowLeft size={16} />
-            <span>Back to Projects Archive</span>
+            <span>Back to Projects</span>
           </Link>
         </div>
 
@@ -43,7 +45,7 @@ export default async function ProjectCaseStudyPage({ params }: CaseStudyProps) {
           <div className="flex items-center gap-2 mb-3 text-xs font-mono text-muted-foreground">
             <span>{project.year}</span>
             <span>•</span>
-            <span>Case Study</span>
+            <span>{project.ownership}</span>
           </div>
           <h1 className="heading-serif text-3xl md:text-5xl font-normal text-foreground mb-4">
             {project.title}
@@ -55,17 +57,16 @@ export default async function ProjectCaseStudyPage({ params }: CaseStudyProps) {
           </div>
         </header>
 
-        {/* Temporary coming soon body */}
-        <div className="flex flex-col items-center justify-center text-center p-12 border border-dashed border-border rounded-xl bg-card">
-          <Construction className="h-10 w-10 text-primary mb-4" />
-          <h2 className="text-lg font-semibold text-foreground mb-1.5">
-            Case study is under construction
-          </h2>
-          <p className="text-sm text-muted-foreground max-w-sm">
-            I am compiling metrics, architecture diagrams, and lessons learned for {project.title}. Check back soon!
-          </p>
+        <div className="space-y-8">
+          <p className="text-base text-muted-foreground leading-relaxed"><Keywords text={project.description || project.blurb} /></p>
+          {project.caseStudy?.map((section) => (
+            <section key={section.heading}>
+              <h2 className="text-xl font-semibold mb-3">{section.heading}</h2>
+              <p className="text-base text-muted-foreground leading-relaxed"><Keywords text={section.body} /></p>
+            </section>
+          ))}
+          <ProjectLinks project={project} />
         </div>
-
       </div>
     </div>
   );

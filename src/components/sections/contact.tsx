@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { publicCareer } from "@/data/career";
 import { site } from "@/data/site";
 import { CopyableEmail } from "@/components/shared/copyable-email";
 import { Reveal } from "@/components/shared/reveal";
@@ -8,6 +9,8 @@ import { Button } from "@/components/ui/button";
 import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 
 export function Contact() {
+  const endpoint = site.formspreeEndpoint;
+  const formConfigured = /^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/.test(endpoint) && !endpoint.includes("placeholder");
   const [formState, setFormState] = React.useState({
     name: "",
     email: "",
@@ -28,6 +31,8 @@ export function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    if (!formConfigured) return;
+
     // Ignore spam bot fill
     if (formState._gotcha) {
       setStatus("success");
@@ -43,8 +48,6 @@ export function Contact() {
     setStatus("submitting");
 
     try {
-      // Resolve endpoint: if blank, warning is logged and fetch is simulated to avoid crash
-      const endpoint = site.formspreeEndpoint || "https://formspree.io/f/placeholder";
       
       const response = await fetch(endpoint, {
         method: "POST",
@@ -66,10 +69,10 @@ export function Contact() {
         const data = await response.json();
         throw new Error(data.error || "Failed to deliver message.");
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error(err);
       setStatus("error");
-      setErrorMessage(err.message || "Something went wrong. Please try again.");
+      setErrorMessage(err instanceof Error ? err.message : "Something went wrong. Please email me directly.");
     }
   };
 
@@ -88,8 +91,7 @@ export function Contact() {
                 Let's talk
               </h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-6">
-                I'm open to roles in full-stack development, AI engineering, and platform/backend work — remote-friendly or India-based. 
-                Also happy to chat about LLM systems, secure architecture, or anything in between.
+                {publicCareer.availability}
               </p>
             </Reveal>
 
@@ -104,12 +106,18 @@ export function Contact() {
           {/* Right: Contact Form */}
           <div className="md:col-span-7">
             <Reveal delay={0.1} className="rounded-xl border border-border bg-card p-6 md:p-8">
-              {status === "success" ? (
+              {!formConfigured ? (
+                <div className="py-8">
+                  <h3 className="text-lg font-semibold mb-3">Email me directly</h3>
+                  <a href={`mailto:${site.email}`} className="text-primary underline break-all">{site.email}</a>
+                  <p className="text-sm text-muted-foreground mt-3">Send role details or your message by email.</p>
+                </div>
+              ) : status === "success" ? (
                 <div className="flex flex-col items-center justify-center text-center py-8 animate-in fade-in-50 duration-300">
                   <CheckCircle2 className="h-12 w-12 text-emerald-600 dark:text-emerald-400 mb-4" />
                   <h3 className="text-lg font-semibold text-foreground mb-2">Message Sent</h3>
                   <p className="text-sm text-muted-foreground max-w-sm">
-                    Thank you! Your message has been sent successfully. I'll get back to you within 48 hours.
+                    Thank you! Your message has been sent successfully. I'll get back to you as soon as I can.
                   </p>
                   <Button
                     onClick={() => setStatus("idle")}

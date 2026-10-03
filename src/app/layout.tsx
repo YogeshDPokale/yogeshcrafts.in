@@ -1,3 +1,5 @@
+import { site } from "@/data/site";
+import { publicCareer } from "@/data/career";
 import type { Metadata } from "next";
 import { Instrument_Serif, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import { Providers } from "@/components/layout/providers";
@@ -26,8 +28,10 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Yogesh Pokale — Full-stack developer",
-  description: "Portfolio of Yogesh Pokale, full-stack developer specializing in .NET, Angular, and AI-native products.",
+  metadataBase: new URL(site.portfolio),
+  title: `${site.name} — Applied AI & Software Engineering`,
+  description: publicCareer.summary,
+  openGraph: { title: `${site.name} — ${site.tagline}`, description: publicCareer.summary, url: site.portfolio },
 };
 
 export default function RootLayout({
@@ -52,6 +56,5 @@ export default function RootLayout({
     </html>
   );
 }
-
 
 

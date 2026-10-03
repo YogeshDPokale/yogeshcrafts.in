@@ -1,11 +1,14 @@
 "use client";
 
+import { Keywords } from "@/components/shared/keywords";
+
 import * as React from "react";
 import Link from "next/link";
+import { publicCareer } from "@/data/career";
 import { site } from "@/data/site";
-import { Reveal, StaggerContainer, StaggerItem } from "@/components/shared/reveal";
+import { StaggerContainer, StaggerItem } from "@/components/shared/reveal";
 import { buttonVariants } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
@@ -16,7 +19,6 @@ export function Hero() {
       <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
         <StaggerContainer className="flex max-w-3xl flex-col items-start gap-6">
           {/* Eyebrow Availability Badge */}
-          {/*
           {site.available && (
             <StaggerItem>
               <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-accent/30 px-3 py-1 text-xs font-mono font-medium text-primary">
@@ -24,11 +26,10 @@ export function Hero() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                 </span>
-                Available for new opportunities
+                Open to remote AI roles · India
               </div>
             </StaggerItem>
           )}
-          */}
 
           {/* Name Header */}
           <StaggerItem>
@@ -47,11 +48,7 @@ export function Hero() {
           {/* Description Subparagraph */}
           <StaggerItem>
             <p className="text-base md:text-lg leading-relaxed text-muted-foreground/80 max-w-2xl">
-              Based in <span className="text-foreground font-medium">Pune, India</span> — I build web applications
-              end to end at{" "}
-              <span className="text-foreground font-medium">Unlock Future</span>: Angular frontends, .NET APIs,
-              and Azure cloud infrastructure. Currently deep in the AI tooling space — building MCP servers,
-              LLM orchestration layers, and developer productivity tooling.
+              <Keywords text={publicCareer.hero} />
             </p>
           </StaggerItem>
 

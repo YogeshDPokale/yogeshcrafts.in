@@ -1,21 +1,23 @@
 "use client";
 
+import { Keywords } from "@/components/shared/keywords";
+
 import * as React from "react";
 import Link from "next/link";
-import { projects, Project } from "@/data/projects";
+import { projects } from "@/data/projects";
+import { ProjectLinks } from "@/components/shared/project-links";
 import { TechChip } from "@/components/shared/tech-chip";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/shared/reveal";
-import { ArrowLeft, ExternalLink } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
+import { ArrowLeft } from "lucide-react";
 
 export default function ProjectsPage() {
-  const [activeFilter, setActiveFilter] = React.useState<"All" | "Web" | "Blockchain" | "AI" | "Tool">("All");
+  const [activeFilter, setActiveFilter] = React.useState<"All" | "Web" | "Blockchain" | "AI" | "Tool" | "Infrastructure">("All");
 
-  const categories = ["All", "Web", "Blockchain", "AI", "Tool"] as const;
+  const categories = ["All", "AI", "Tool", "Web", "Infrastructure", "Blockchain"] as const;
 
   const filteredProjects = projects.filter((project) => {
     if (activeFilter === "All") return true;
-    return project.tags.includes(activeFilter as any);
+    return project.tags.includes(activeFilter);
   });
 
   const showFilterBar = projects.length >= 4;
@@ -41,10 +43,10 @@ export default function ProjectsPage() {
         <div className="mb-12 border-b border-border/40 pb-6">
           <Reveal>
             <h1 className="heading-serif text-4xl md:text-5xl font-normal text-foreground mb-3">
-              Projects Archive
+              Selected Work & Archive
             </h1>
             <p className="text-sm md:text-base text-muted-foreground max-w-xl leading-relaxed">
-              A detailed record of systems, blockchain utilities, and applications I've built.
+              Applied AI, developer tooling, and a personal portfolio, alongside earlier academic projects.
             </p>
           </Reveal>
         </div>
@@ -99,7 +101,7 @@ export default function ProjectsPage() {
                 </h3>
 
                 <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-6">
-                  {project.description || project.blurb}
+                  <Keywords text={project.description || project.blurb} />
                 </p>
               </div>
 
@@ -110,30 +112,7 @@ export default function ProjectsPage() {
                   ))}
                 </div>
 
-                <div className="flex items-center gap-4 pt-3.5 border-t border-border/40 text-xs font-mono">
-                  {project.links.github && (
-                    <a
-                      href={project.links.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      <FaGithub size={12} />
-                      <span>Codebase</span>
-                    </a>
-                  )}
-                  {project.links.live && (
-                    <a
-                      href={project.links.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-primary hover:underline"
-                    >
-                      <ExternalLink size={12} />
-                      <span>Live Demo</span>
-                    </a>
-                  )}
-                </div>
+                <ProjectLinks project={project} />
               </div>
             </StaggerItem>
           ))}

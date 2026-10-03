@@ -57,7 +57,12 @@ export function TechChip({ name, size = "sm" }: TechChipProps) {
   const config = isKey ? TECH[name as TechKey] : null;
 
   const label = config ? config.label : name;
-  const color = config ? config.color : "#78716c"; // Default to stone-500 gray
+  const brandColor = config ? config.color : "#78716c";
+  const color = brandColor === "#000000" ? "#57534e" : brandColor;
+  const darkText = "#" + [1, 3, 5].map((offset) => {
+    const channel = parseInt(color.slice(offset, offset + 2), 16);
+    return Math.round(channel + (255 - channel) * 0.4).toString(16).padStart(2, "0");
+  }).join("");
   const IconComponent = config?.icon ? ICON_MAP[config.icon] : null;
 
   // Visual sizes
@@ -67,6 +72,7 @@ export function TechChip({ name, size = "sm" }: TechChipProps) {
   // Custom inline styles to support brand colors dynamically
   const style = {
     "--chip-color": color,
+    "--chip-dark-text": darkText,
   } as React.CSSProperties;
 
   return (
@@ -75,7 +81,7 @@ export function TechChip({ name, size = "sm" }: TechChipProps) {
       className={`
         inline-flex items-center gap-1.5 rounded-md border font-mono font-medium transition-all duration-200
         bg-[var(--chip-color)]/10 border-[var(--chip-color)]/25 text-[var(--chip-color)]
-        dark:bg-[var(--chip-color)]/15 dark:border-[var(--chip-color)]/30
+        dark:bg-[var(--chip-color)]/15 dark:border-[var(--chip-color)]/30 dark:text-[var(--chip-dark-text)]
         ${paddingClass}
       `}
     >

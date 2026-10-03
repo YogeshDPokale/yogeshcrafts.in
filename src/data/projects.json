@@ -1,0 +1,174 @@
+[
+  {
+    "slug": "mssql-mcp-server",
+    "title": "MSSQL MCP Server",
+    "year": 2024,
+    "ownership": "Company engineering tooling",
+    "status": "Private implementation; public overview",
+    "blurb": "MCP tooling that gives AI coding assistants database schema context on demand.",
+    "description": "Built an internal MCP server connecting Cursor and Claude Code to MSSQL schema context, reducing manual copy-pasting.",
+    "tech": [
+      "typescript",
+      "nodejs",
+      "mssql",
+      "mcp"
+    ],
+    "tags": [
+      "Tool",
+      "AI"
+    ],
+    "links": {
+      "caseStudy": "/projects/mssql-mcp-server"
+    },
+    "featured": true,
+    "caseStudy": [
+      {
+        "heading": "Problem",
+        "body": "AI coding assistants needed database context while engineers worked on application code. Passing schema details manually interrupted the development workflow."
+      },
+      {
+        "heading": "Implementation",
+        "body": "Built an MCP server that exposes MSSQL schema context to coding assistants, with TypeScript and Node.js connecting the tools to the database."
+      },
+      {
+        "heading": "Use in the workflow",
+        "body": "Integrated the server with Cursor and Claude Code so engineers could request schema context as part of their existing coding workflow."
+      },
+      {
+        "heading": "Engineering focus",
+        "body": "Making context available through a tool interface helps reduce manual context switching. This overview describes the approach without exposing company source code or database details."
+      }
+    ],
+    "resumeDescription": "Internal MCP server exposing MSSQL schema context to Cursor and Claude Code."
+  },
+  {
+    "slug": "ai-assistant-platform",
+    "title": "AI Assistant Platform",
+    "year": 2024,
+    "ownership": "AI engineering project",
+    "status": "Implementation overview",
+    "blurb": "An AI assistant with multi-LLM support, Python execution in Docker, chat summarization, and connectors.",
+    "description": "Built an AI assistant with Docker-based Python execution, chat summarization, deferred connectors, and multi-LLM support.",
+    "tech": [
+      "angular",
+      "typescript",
+      "dotnet",
+      "csharp",
+      "python",
+      "azure",
+      "docker"
+    ],
+    "tags": [
+      "AI",
+      "Web"
+    ],
+    "links": {},
+    "featured": true,
+    "caseStudy": [
+      {
+        "heading": "Problem",
+        "body": "An AI assistant needs more than a chat interface: it must manage conversation context, use tools, execute code, and connect to external services."
+      },
+      {
+        "heading": "Implementation",
+        "body": "Built the interface and supporting services with Angular and .NET. Added Python code execution in Docker containers, chat summarization for longer conversations, deferred connector handling, and multi-LLM support."
+      },
+      {
+        "heading": "Related AI engineering",
+        "body": "Company copilot work included a unified streaming API across Azure OpenAI, Vertex AI, and Anthropic Claude; embeddings and hybrid retrieval for tool discovery; and Google Workspace/Microsoft 365 MCP connectors with OAuth/PKCE and per-user token isolation."
+      },
+      {
+        "heading": "Reliability and security",
+        "body": "Investigated tool-call and empty-output failures, compared models, and reviewed generated outputs. Worked on prompt-injection hardening and context handling."
+      }
+    ],
+    "resumeDescription": "AI assistant with Docker/Python execution, chat summarization, connectors, and multi-LLM support."
+  },
+  {
+    "slug": "portfolio",
+    "title": "yogeshcrafts.in",
+    "year": 2025,
+    "ownership": "Personal project",
+    "status": "Public portfolio",
+    "blurb": "A Next.js portfolio on Cloudflare Workers with OpenNext and a shared resume content pipeline.",
+    "description": "Next.js portfolio on Cloudflare Workers via OpenNext, with shared web/PDF resume content, themes, and dynamic share cards.",
+    "tech": [
+      "nextjs",
+      "typescript",
+      "cloudflare"
+    ],
+    "tags": [
+      "Web",
+      "Infrastructure"
+    ],
+    "links": {
+      "live": "https://yogeshcrafts.in",
+      "github": "https://github.com/YogeshDPokale/yogeshcrafts.in",
+      "caseStudy": "/projects/portfolio"
+    },
+    "featured": true,
+    "caseStudy": [
+      {
+        "heading": "Goal",
+        "body": "Present software engineering and applied AI work in one place, with a readable web resume and a downloadable PDF."
+      },
+      {
+        "heading": "Implementation",
+        "body": "Built the site with Next.js App Router, TypeScript, responsive layouts, and dark/light themes. The deployment uses OpenNext on Cloudflare Workers."
+      },
+      {
+        "heading": "Resume content",
+        "body": "Curated public JSON supplies the portfolio and web resume. A Node.js generator creates the LaTeX resume from the same approved content, and the resume workflow compiles the PDF."
+      },
+      {
+        "heading": "Presentation",
+        "body": "Added dynamic Open Graph images, a sitemap, readable technology labels, explicit project ownership, and case-study links."
+      }
+    ],
+    "resumeDescription": "Personal Next.js portfolio on Cloudflare Workers with a shared web/PDF resume pipeline."
+  },
+  {
+    "slug": "dairy-management-system",
+    "title": "Dairy Management System",
+    "year": 2022,
+    "ownership": "Academic / learning project",
+    "status": "Archived project",
+    "blurb": "Milk producer records, rate calculations, and weekly/monthly billing reports.",
+    "description": "A dairy management project for recording milk collection, calculating producer pricing, and generating weekly/monthly billing reports.",
+    "tech": [
+      "php",
+      "javascript",
+      "mysql"
+    ],
+    "tags": [
+      "Web"
+    ],
+    "links": {
+      "caseStudy": "/projects/dairy-management-system"
+    },
+    "featured": false
+  },
+  {
+    "slug": "blockchain-banking",
+    "title": "Blockchain Banking",
+    "year": 2023,
+    "ownership": "Academic / learning project",
+    "status": "Archived experiment",
+    "blurb": "An experimental banking interface using a private blockchain and Solidity contracts.",
+    "description": "An experimental banking portal that records ledger transactions on a private Ethereum blockchain using Solidity smart contracts.",
+    "tech": [
+      "nodejs",
+      "solidity",
+      "mysql",
+      "metamask"
+    ],
+    "tags": [
+      "Web",
+      "Blockchain"
+    ],
+    "links": {
+      "caseStudy": "/projects/blockchain-banking"
+    },
+    "featured": false
+  }
+]

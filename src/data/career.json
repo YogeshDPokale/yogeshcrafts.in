@@ -1,0 +1,349 @@
+{
+  "updated": "2026-10-03",
+  "identity": {
+    "name": "Yogesh Pokale",
+    "tagline": "Software Engineer · Applied AI & Agents · Azure",
+    "location": "Pune, Maharashtra, India",
+    "email": "yogesh.d.pokale@gmail.com",
+    "portfolio": "https://yogeshcrafts.in",
+    "github": "https://github.com/YogeshDPokale",
+    "linkedin": "https://www.linkedin.com/in/yogesh-pokale-7b887025b"
+  },
+  "summary": "Software engineer building applied AI products with .NET, Angular, Python, and Azure. Experience in LLM orchestration, Model Context Protocol (MCP), hybrid tool retrieval, secure connectors, and production deployments.",
+  "hero": "I build applied AI products with .NET, Angular, Python, and Azure—from LLM orchestration and MCP tools to secure connectors and Docker code execution.",
+  "about": [
+    "My engineering career began in November 2023 at Unlock Future Fintech Pvt Ltd. I build .NET and Angular products and have handled company deployments for two years.",
+    "My AI work covers company copilot features, LLM orchestration, MCP tools, hybrid tool retrieval, and Python code execution. I also investigate tool failures and review model outputs.",
+    "I work with Linux, SSH, Docker, and Azure, alongside JWT, SSO, RBAC, VAPT remediation, and technical audit support."
+  ],
+  "availability": "Open to remote Applied AI, LLM, agent engineering, and forward-deployed AI roles that accept candidates working from India. Also interested in AI-focused backend, full-stack, and developer tooling roles.",
+  "stats": [
+    "Engineering since Nov 2023",
+    "Deployments across 3 products",
+    "Linux · Docker · Azure",
+    "LLM APIs · MCP · tool retrieval"
+  ],
+  "learning": {
+    "title": "Professional development",
+    "items": [
+      {
+        "name": "Azure Administrator (AZ-104)",
+        "status": "Coursework completed; certification exam pending."
+      }
+    ],
+    "note": "Coursework and study progress are listed separately from earned certifications."
+  },
+  "experience": [
+    {
+      "name": "Unlock Future Fintech Pvt Ltd",
+      "location": "Pune, India",
+      "techTags": [
+        "dotnet",
+        "csharp",
+        "aspnet",
+        "angular",
+        "typescript",
+        "python",
+        "mssql",
+        "azure",
+        "gcp",
+        "azureopenai",
+        "anthropic",
+        "mcp",
+        "docker",
+        "linux"
+      ],
+      "roles": [
+        {
+          "title": "Software Engineer (Full-Stack)",
+          "type": "Full-time",
+          "start": "Jun 2025",
+          "end": "Present",
+          "bullets": [
+            "Built company copilot features using Azure OpenAI, Vertex AI, and Anthropic Claude behind a unified streaming API.",
+            "Implemented embeddings and hybrid tool retrieval; investigated tool failures and reviewed model outputs.",
+            "Built Google Workspace/Microsoft 365 MCP connectors with OAuth/PKCE, per-user token isolation, and prompt injection hardening.",
+            "Built an AI assistant with Python code execution in Docker, chat summarization, deferred connectors, and multi-LLM support.",
+            "Integrated MSSQL MCP tooling with Cursor and Claude Code for schema context and internal developer workflows.",
+            "Owned JWT, refresh-token rotation, SSO, and RBAC; optimized Angular document-editor performance with virtual scrolling.",
+            "Handled deployments for two years across 3 products using Linux, SSH, Docker, Azure App Services/VMs, GitHub Actions runners, and Cloudflare."
+          ]
+        },
+        {
+          "title": "Associate Software Developer",
+          "type": "Full-time",
+          "start": "Jun 2024",
+          "end": "Jun 2025",
+          "bullets": [
+            "Delivered .NET APIs and Angular features from design to deployment, with Azure SQL and Blob Storage integration.",
+            "Worked with VAPT firms on remediation and contributed to GDPR/ISO technical audits.",
+            "Optimized Angular bundles, change detection, and Core Web Vitals; implemented SSO and refresh-token rotation."
+          ]
+        },
+        {
+          "title": "Software Developer Intern",
+          "type": "Internship",
+          "start": "Nov 2023",
+          "end": "May 2024",
+          "bullets": [
+            "Contributed to ASP.NET APIs and Angular features; learned CI/CD, code review, and release practices."
+          ]
+        }
+      ]
+    }
+  ],
+  "skillGroups": [
+    {
+      "label": "Applied AI & Agents",
+      "items": [
+        "azureopenai",
+        "vertexai",
+        "anthropic",
+        "mcp",
+        {
+          "label": "Tool Calling"
+        },
+        {
+          "label": "Agentic Workflows"
+        },
+        {
+          "label": "Hybrid Tool Retrieval"
+        },
+        {
+          "label": "Embeddings"
+        },
+        {
+          "label": "Context Management"
+        }
+      ]
+    },
+    {
+      "label": "Cloud & Infrastructure",
+      "items": [
+        "azure",
+        "gcp",
+        "cloudflare",
+        "linux",
+        "docker",
+        "blob",
+        {
+          "label": "SSH"
+        },
+        {
+          "label": "GitHub Actions"
+        },
+        {
+          "label": "CI/CD"
+        }
+      ]
+    },
+    {
+      "label": "Backend",
+      "items": [
+        "dotnet",
+        "csharp",
+        "aspnet",
+        "nodejs",
+        "python"
+      ]
+    },
+    {
+      "label": "Frontend",
+      "items": [
+        "angular",
+        "typescript",
+        "rxjs",
+        "javascript",
+        "nextjs",
+        {
+          "label": "Performance Optimization"
+        }
+      ]
+    },
+    {
+      "label": "Auth & Security",
+      "emphasis": true,
+      "items": [
+        {
+          "label": "OAuth / PKCE"
+        },
+        {
+          "label": "JWT & Refresh Tokens"
+        },
+        {
+          "label": "Google / Microsoft SSO"
+        },
+        {
+          "label": "RBAC"
+        },
+        {
+          "label": "User-token Isolation"
+        },
+        {
+          "label": "Prompt-injection Hardening"
+        },
+        {
+          "label": "VAPT Remediation"
+        }
+      ]
+    },
+    {
+      "label": "Databases",
+      "items": [
+        "mssql",
+        "mysql",
+        "postgres"
+      ]
+    },
+    {
+      "label": "Also Familiar With",
+      "items": [
+        "c",
+        "cpp",
+        "java",
+        "php",
+        "solidity",
+        {
+          "label": "Flutter"
+        },
+        {
+          "label": "R"
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "M.Sc. in Computer Science",
+      "institution": "Sir Parashurambhau College, Pune",
+      "period": "Oct 2022 – May 2024",
+      "details": "Focus on advanced computing architectures, database systems, and software engineering."
+    },
+    {
+      "degree": "B.Sc. in Computer Science",
+      "institution": "Savitribai Phule Pune University",
+      "period": "Jul 2019 – Sep 2022",
+      "details": "First Class with A+. Groundwork in algorithm design, data structures, and web development technologies.",
+      "distinction": "First Class with A+"
+    }
+  ],
+  "award": {
+    "title": "Rank 1 — Intercollegiate Electronics Competition",
+    "year": 2019,
+    "description": "Awarded for designing and demonstrating hardware integration systems."
+  },
+  "resumeProjectSlugs": [
+    "ai-assistant-platform",
+    "mssql-mcp-server",
+    "portfolio"
+  ],
+  "highlights": [
+    "company copilot",
+    "Azure OpenAI",
+    "Vertex AI",
+    "Anthropic Claude",
+    "unified streaming API",
+    "hybrid tool retrieval",
+    "MCP connectors",
+    "OAuth/PKCE",
+    "per-user token isolation",
+    "Python code execution",
+    "Docker",
+    "MSSQL MCP",
+    "Cursor",
+    "Claude Code",
+    "JWT",
+    "SSO",
+    "RBAC",
+    "virtual scrolling",
+    "Linux",
+    "SSH",
+    "Azure App Services/VMs",
+    "GitHub Actions",
+    "Cloudflare",
+    "Model Context Protocol (MCP)",
+    ".NET",
+    "Angular",
+    "Python",
+    "Azure",
+    "MCP",
+    "LLM orchestration",
+    "VAPT",
+    "AZ-104",
+    "Next.js",
+    "OpenNext",
+    "Cloudflare Workers"
+  ],
+  "resumeSkillGroups": [
+    {
+      "label": "Applied AI",
+      "items": [
+        "azureopenai",
+        "vertexai",
+        "anthropic",
+        "mcp",
+        {
+          "label": "Tool Calling"
+        },
+        {
+          "label": "Hybrid Tool Retrieval"
+        },
+        {
+          "label": "Context Management"
+        }
+      ]
+    },
+    {
+      "label": "Engineering",
+      "items": [
+        "dotnet",
+        "csharp",
+        "aspnet",
+        "angular",
+        "typescript",
+        "python",
+        "nodejs",
+        "mssql"
+      ]
+    },
+    {
+      "label": "Cloud & Delivery",
+      "items": [
+        "azure",
+        "gcp",
+        "linux",
+        "docker",
+        "cloudflare",
+        {
+          "label": "SSH"
+        },
+        {
+          "label": "GitHub Actions"
+        },
+        {
+          "label": "CI/CD"
+        }
+      ]
+    },
+    {
+      "label": "Security",
+      "items": [
+        {
+          "label": "OAuth / PKCE"
+        },
+        {
+          "label": "JWT / SSO / RBAC"
+        },
+        {
+          "label": "Token Isolation"
+        },
+        {
+          "label": "Prompt Hardening"
+        },
+        {
+          "label": "VAPT"
+        }
+      ]
+    }
+  ]
+}

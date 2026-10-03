@@ -1,7 +1,9 @@
 "use client";
 
+import { Keywords } from "@/components/shared/keywords";
+
 import * as React from "react";
-import { site } from "@/data/site";
+import { publicCareer } from "@/data/career";
 import { Reveal } from "@/components/shared/reveal";
 
 export function About() {
@@ -37,42 +39,13 @@ export function About() {
             </Reveal>
             
             <Reveal delay={0.2} className="flex flex-col gap-6 text-base md:text-lg text-muted-foreground leading-relaxed">
-              <p>
-                I'm a full-stack software engineer based in{" "}
-                <span className="text-foreground font-medium">Pune, India</span>, with 2+ years of
-                production experience. I build web applications end to end —{" "}
-                <span className="text-foreground font-medium">Angular</span> frontends,{" "}
-                <span className="text-foreground font-medium">.NET</span> APIs, and{" "}
-                <span className="text-foreground font-medium">Azure</span> cloud infrastructure — and I own
-                the full deployment lifecycle from development to live.
-              </p>
-
-              <p>
-                I've spent the last year deep in AI tooling — building an{" "}
-                <span className="text-foreground font-medium">MCP server</span> for IDE-to-database context,
-                replicating an AI assistant platform with containerized code execution and connector handling,
-                and building internal developer plugins with Claude Code and Cursor. I'm drawn to the tooling
-                layer: the systems that make developers and AI work better together.
-              </p>
-
-              <p>
-                I've also worked closely with VAPT security firms, implemented{" "}
-                <span className="text-foreground font-medium">OAuth/OIDC</span> authentication flows across
-                multiple products, and been involved in GDPR and ISO compliance audits — so I think about
-                security and reliability as part of shipping, not an afterthought.
-              </p>
+              {publicCareer.about.map((paragraph) => <p key={paragraph}><Keywords text={paragraph} /></p>)}
             </Reveal>
 
             {/* Metric Stats Strip */}
             <Reveal delay={0.3} className="pt-4 border-t border-border/40 mt-2">
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs md:text-sm font-mono text-muted-foreground/80">
-                <span>2+ Years Experience</span>
-                <span className="text-primary/40">•</span>
-                <span>3+ Production Apps</span>
-                <span className="text-primary/40">•</span>
-                <span>VAPT · GDPR · ISO</span>
-                <span className="text-primary/40">•</span>
-                <span>Azure · GCP · Cloudflare</span>
+                {publicCareer.stats.map((stat) => <span key={stat}>{stat}</span>)}
               </div>
             </Reveal>
           </div>

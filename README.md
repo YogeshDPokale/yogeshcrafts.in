@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# yogeshcrafts.in
 
-## Getting Started
+Yogesh Pokale's portfolio, web resume, and downloadable LaTeX resume.
+Built with Next.js App Router and deployed to Cloudflare Workers through OpenNext.
 
-First, run the development server:
+## Development
 
-```bash
+```sh
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Public content and resume
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `src/data/career.json`: approved identity, summary, experience, skills, education, and study status.
+- `src/data/projects.json`: selected work and archived projects, with explicit ownership and public overviews.
+- `src/data/tech-registry.json`: readable technology labels used by both the website and PDF.
+- `npm run resume:source`: generates `src/resume/resume.tex` from those files. Edit the JSON, not the generated LaTeX.
+- The Build Resume PDF workflow regenerates the source and compiles `public/resume.pdf`. Review the extracted text and rendered pages before using an updated PDF.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Private career evidence stays outside this repository. Only approved public descriptions belong here. Coursework and exams pending are professional development, not earned certifications. Keep original role and project dates unless new dates are confirmed.
 
-## Learn More
+## Contact
 
-To learn more about Next.js, take a look at the following resources:
+Set `NEXT_PUBLIC_FORMSPREE_ENDPOINT` to a real Formspree endpoint to enable the contact form. Without one, the contact section offers direct email. Never commit credentials.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Builds and hosting
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```sh
+npm run build
+npm run build:cf
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The OpenNext output is configured in `wrangler.jsonc` for Cloudflare Workers. Publishing uses the existing `npm run deploy` command when authorized.

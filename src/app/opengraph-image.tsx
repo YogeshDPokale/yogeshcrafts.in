@@ -3,7 +3,7 @@ import { site } from "@/data/site";
 
 export const runtime = "edge";
 
-export const alt = "Yogesh Pokale — Full-stack developer";
+export const alt = `${site.name} — ${site.tagline}`;
 export const size = {
   width: 1200,
   height: 630,
@@ -38,7 +38,7 @@ export default async function Image() {
             fontFamily: "monospace",
           }}
         >
-          Portfolio Archive
+          Applied AI & Engineering
         </div>
 
         {/* Title */}
